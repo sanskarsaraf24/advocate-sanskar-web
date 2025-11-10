@@ -53,41 +53,47 @@ const CommercialDisputes = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <section className="pt-32 pb-16 bg-secondary">
+      <section className="pt-32 pb-16 bg-gradient-to-b from-secondary/50 to-background border-b-2 border-border">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center space-y-6">
+          <div className="max-w-4xl mx-auto text-center space-y-8">
             <div className="flex justify-center mb-6">
-              <div className="p-4 bg-accent/10 rounded-lg">
-                <Briefcase className="h-12 w-12 text-accent" />
+              <div className="p-6 bg-accent/10 border-2 border-accent/20">
+                <Briefcase className="h-16 w-16 text-accent" />
               </div>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground">
-              Commercial Disputes & Corporate Litigation
-            </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <div className="inline-block border-b-4 border-accent pb-2">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
+                Commercial Disputes & Corporate Litigation
+              </h1>
+            </div>
+            <p className="text-xl text-muted-foreground leading-relaxed font-crimson">
               Commercial disputes are an inherent part of the business world, but when they arise, they require swift, strategic, and decisive legal action. Advocate Sanskar Saraf provides comprehensive legal counsel for a wide spectrum of commercial disputes, representing both plaintiffs and defendants with an equal measure of expertise. His practice is built on a deep understanding of corporate law, the intricacies of commercial transactions, and the procedural nuances of civil and commercial litigation.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="py-24">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-foreground mb-12 text-center">
-              Overview of Our Services
-            </h2>
+            <div className="text-center mb-16">
+              <div className="inline-block border-b-4 border-accent pb-2">
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+                  Overview of Our Services
+                </h2>
+              </div>
+            </div>
             <div className="space-y-8">
               {services.map((service, index) => (
                 <div
                   key={index}
-                  className="bg-card p-6 rounded-lg border border-border hover:shadow-lg transition-shadow"
+                  className="bg-card p-8 border-l-4 border-accent hover:shadow-2xl transition-all duration-300"
                 >
-                  <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-accent" />
+                  <h3 className="text-2xl font-semibold text-foreground mb-4 flex items-center gap-3 font-playfair">
+                    <CheckCircle2 className="h-6 w-6 text-accent flex-shrink-0" />
                     {service.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed text-lg font-crimson pl-9">
                     {service.description}
                   </p>
                 </div>
@@ -97,29 +103,33 @@ const CommercialDisputes = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-secondary">
+      <section className="py-24 bg-card border-y-2 border-border">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-foreground mb-12 text-center">
-              Our Process in Detail
-            </h2>
-            <div className="space-y-6">
+            <div className="text-center mb-16">
+              <div className="inline-block border-b-4 border-accent pb-2">
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+                  Our Process in Detail
+                </h2>
+              </div>
+            </div>
+            <div className="space-y-8">
               {process.map((step) => (
                 <div
                   key={step.number}
-                  className="bg-card p-6 rounded-lg border border-border"
+                  className="bg-secondary/50 p-8 border-l-4 border-accent"
                 >
-                  <div className="flex items-start gap-6">
+                  <div className="flex items-start gap-8">
                     <div className="flex-shrink-0">
-                      <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
-                        <span className="text-lg font-bold text-accent">{step.number}</span>
+                      <div className="w-16 h-16 border-2 border-accent flex items-center justify-center bg-card">
+                        <span className="text-2xl font-bold text-accent font-playfair">{step.number}</span>
                       </div>
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-semibold text-foreground mb-2">
+                      <h3 className="text-2xl font-semibold text-foreground mb-3 font-playfair">
                         {step.title}
                       </h3>
-                      <p className="text-muted-foreground leading-relaxed">
+                      <p className="text-muted-foreground leading-relaxed text-lg font-crimson">
                         {step.description}
                       </p>
                     </div>

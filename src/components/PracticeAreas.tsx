@@ -37,13 +37,15 @@ const PracticeAreas = () => {
   ];
 
   return (
-    <section id="practice-areas" className="py-24">
+    <section id="practice-areas" className="py-28 bg-gradient-to-b from-background to-secondary/30">
       <div className="container mx-auto px-6">
-        <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-            Areas of Practice
-          </h2>
-          <p className="text-lg text-muted-foreground">
+        <div className="max-w-3xl mx-auto text-center space-y-8 mb-20">
+          <div className="inline-block border-b-4 border-accent pb-2">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+              Areas of Practice
+            </h2>
+          </div>
+          <p className="text-xl text-muted-foreground font-crimson">
             Comprehensive legal services tailored to your specific needs
           </p>
         </div>
@@ -51,19 +53,19 @@ const PracticeAreas = () => {
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {practices.map((practice) => (
             <Link key={practice.title} to={practice.link}>
-              <Card className="border-border hover:shadow-lg transition-all h-full cursor-pointer hover:border-accent/50">
-                <CardHeader>
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-accent/10 rounded-lg">
-                      <practice.icon className="h-6 w-6 text-accent" />
+              <Card className="border-2 border-border hover:shadow-2xl transition-all duration-300 h-full cursor-pointer hover:border-accent bg-card">
+                <CardHeader className="pb-4">
+                  <div className="flex items-start gap-6">
+                    <div className="p-4 bg-accent/10 border-2 border-accent/20">
+                      <practice.icon className="h-8 w-8 text-accent" />
                     </div>
-                    <div className="space-y-1">
-                      <CardTitle className="text-xl">{practice.title}</CardTitle>
+                    <div className="space-y-2 flex-1">
+                      <CardTitle className="text-2xl font-playfair">{practice.title}</CardTitle>
                     </div>
                   </div>
                 </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-muted-foreground leading-relaxed">
+                <CardContent className="pt-0">
+                  <CardDescription className="text-muted-foreground leading-relaxed text-base font-crimson">
                     {practice.description}
                   </CardDescription>
                 </CardContent>

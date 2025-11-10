@@ -16,47 +16,49 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-secondary">
+    <section id="contact" className="py-28 bg-card border-y-2 border-border">
       <div className="container mx-auto px-6">
-        <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-            Get in Touch
-          </h2>
-          <p className="text-lg text-muted-foreground">
+        <div className="max-w-3xl mx-auto text-center space-y-8 mb-20">
+          <div className="inline-block border-b-4 border-accent pb-2">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+              Get in Touch
+            </h2>
+          </div>
+          <p className="text-xl text-muted-foreground font-crimson">
             Schedule a consultation to discuss your legal needs
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-          <div className="space-y-8">
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-accent/10 rounded-lg">
-                  <Phone className="h-5 w-5 text-accent" />
+        <div className="grid md:grid-cols-2 gap-16 max-w-5xl mx-auto">
+          <div className="space-y-10">
+            <div className="space-y-8">
+              <div className="flex items-start gap-6 group">
+                <div className="p-4 bg-accent/10 border-2 border-accent/20 group-hover:border-accent transition-colors">
+                  <Phone className="h-6 w-6 text-accent" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">Phone</h3>
-                  <p className="text-muted-foreground">+91 9717460924</p>
+                  <h3 className="font-semibold text-foreground mb-2 text-xl font-playfair">Phone</h3>
+                  <p className="text-muted-foreground text-lg font-crimson">+91 9717460924</p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-accent/10 rounded-lg">
-                  <Mail className="h-5 w-5 text-accent" />
+              <div className="flex items-start gap-6 group">
+                <div className="p-4 bg-accent/10 border-2 border-accent/20 group-hover:border-accent transition-colors">
+                  <Mail className="h-6 w-6 text-accent" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                  <p className="text-muted-foreground">contact@sanskarsaraf.in</p>
+                  <h3 className="font-semibold text-foreground mb-2 text-xl font-playfair">Email</h3>
+                  <p className="text-muted-foreground text-lg font-crimson">contact@sanskarsaraf.in</p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-accent/10 rounded-lg">
-                  <MapPin className="h-5 w-5 text-accent" />
+              <div className="flex items-start gap-6 group">
+                <div className="p-4 bg-accent/10 border-2 border-accent/20 group-hover:border-accent transition-colors">
+                  <MapPin className="h-6 w-6 text-accent" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">Office</h3>
-                  <p className="text-muted-foreground">
+                  <h3 className="font-semibold text-foreground mb-2 text-xl font-playfair">Office</h3>
+                  <p className="text-muted-foreground text-lg font-crimson">
                     2608, Naya Bazaar, Delhi 110006
                   </p>
                 </div>
@@ -64,12 +66,12 @@ const Contact = () => {
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-6 bg-card p-8 rounded-lg border border-border">
+          <form onSubmit={handleSubmit} className="space-y-6 bg-secondary/50 p-10 border-2 border-border shadow-xl">
             <div className="space-y-2">
               <Input
                 placeholder="Your Name"
                 required
-                className="bg-background"
+                className="bg-background border-2 border-border font-crimson text-base py-6"
               />
             </div>
             <div className="space-y-2">
@@ -77,7 +79,7 @@ const Contact = () => {
                 type="email"
                 placeholder="Your Email"
                 required
-                className="bg-background"
+                className="bg-background border-2 border-border font-crimson text-base py-6"
               />
             </div>
             <div className="space-y-2">
@@ -85,19 +87,19 @@ const Contact = () => {
                 type="tel"
                 placeholder="Your Phone"
                 required
-                className="bg-background"
+                className="bg-background border-2 border-border font-crimson text-base py-6"
               />
             </div>
             <div className="space-y-2">
               <Textarea
                 placeholder="Briefly describe your legal matter"
                 required
-                className="min-h-[120px] bg-background"
+                className="min-h-[140px] bg-background border-2 border-border font-crimson text-base"
               />
             </div>
             <Button
               type="submit"
-              className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
+              className="w-full bg-primary text-primary-foreground hover:bg-primary/90 border-2 border-primary py-6 text-base"
               size="lg"
             >
               Send Message

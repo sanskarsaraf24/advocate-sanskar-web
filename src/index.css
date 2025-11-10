@@ -8,35 +8,35 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 40 25% 97%;
-    --foreground: 20 15% 15%;
+    --background: 45 35% 94%;
+    --foreground: 25 25% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 20 15% 15%;
+    --card: 0 0% 99%;
+    --card-foreground: 25 25% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 20 15% 15%;
+    --popover: 0 0% 99%;
+    --popover-foreground: 25 25% 15%;
 
-    --primary: 355 45% 25%;
-    --primary-foreground: 40 25% 97%;
+    --primary: 345 55% 22%;
+    --primary-foreground: 45 35% 94%;
 
-    --secondary: 40 20% 92%;
-    --secondary-foreground: 355 45% 25%;
+    --secondary: 40 30% 88%;
+    --secondary-foreground: 345 55% 22%;
 
-    --muted: 40 15% 90%;
-    --muted-foreground: 20 10% 40%;
+    --muted: 40 25% 85%;
+    --muted-foreground: 25 20% 38%;
 
-    --accent: 38 60% 50%;
-    --accent-foreground: 40 25% 97%;
+    --accent: 40 85% 45%;
+    --accent-foreground: 0 0% 99%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 40 25% 97%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 45 35% 94%;
 
-    --border: 40 15% 85%;
-    --input: 40 15% 85%;
-    --ring: 355 45% 25%;
+    --border: 40 20% 78%;
+    --input: 40 20% 82%;
+    --ring: 345 55% 22%;
 
-    --radius: 0.25rem;
+    --radius: 0.125rem;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -94,10 +94,17 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground font-garamond;
+    @apply bg-background text-foreground font-crimson antialiased;
+    font-size: 18px;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-playfair;
+    @apply font-playfair font-semibold;
+    letter-spacing: 0.015em;
+  }
+  
+  p {
+    @apply leading-relaxed;
+    line-height: 1.8;
   }
 }
