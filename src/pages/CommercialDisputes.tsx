@@ -1,8 +1,12 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Briefcase, CheckCircle2 } from "lucide-react";
+import { useEffect } from "react";
 
 const CommercialDisputes = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const services = [
     {
       title: "Breach of Contract",

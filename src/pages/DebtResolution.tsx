@@ -1,8 +1,12 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { TrendingUp, CheckCircle2 } from "lucide-react";
+import { useEffect } from "react";
 
 const DebtResolution = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const frameworks = [
     {
       title: "Debt Recovery Tribunal (DRT)",

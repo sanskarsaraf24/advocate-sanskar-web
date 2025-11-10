@@ -1,8 +1,12 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Shield, CheckCircle2 } from "lucide-react";
+import { useEffect } from "react";
 
 const ConsumerDisputes = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const consumerServices = [
     "Advocate Sanskar Saraf assists consumers in filing complaints before the appropriate consumer dispute resolution forum, ranging from the District Commission to the National Commission.",
     "Cases are meticulously prepared to seek reliefs such as refunds, replacement of defective goods, or compensation for damages.",

@@ -1,8 +1,12 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Scale, CheckCircle2 } from "lucide-react";
+import { useEffect } from "react";
 
 const DisputeResolution = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const arbitrationServices = [
     "Governed by the Arbitration and Conciliation Act, 1996, arbitration provides a private, binding, and expedited process for resolving commercial disputes outside of court.",
     "Advocate Sanskar Saraf assists in all stages of the process, including drafting arbitration clauses, invoking proceedings, presenting cases before a tribunal, and enforcing the final arbitral award.",

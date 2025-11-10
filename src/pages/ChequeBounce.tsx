@@ -1,8 +1,12 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { FileText, CheckCircle2 } from "lucide-react";
+import { useEffect } from "react";
 
 const ChequeBounce = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const payeeServices = [
     "We draft and serve the mandatory statutory demand notice to the drawer, giving them the required time to make the payment.",
     "If the payment is not made, we file a criminal complaint before the appropriate court, ensuring strict compliance with all procedural requirements.",

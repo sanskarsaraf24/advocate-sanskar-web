@@ -1,6 +1,12 @@
-import { Scale } from "lucide-react";
+import { Scale, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLocation, useNavigate } from "react-router-dom";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Header = () => {
   const location = useLocation();
@@ -41,12 +47,29 @@ const Header = () => {
           >
             About
           </button>
-          <button
-            onClick={() => scrollToSection("practice-areas")}
-            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Practice Areas
-          </button>
+          <DropdownMenu>
+            <DropdownMenuTrigger className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors">
+              Practice Areas
+              <ChevronDown className="h-4 w-4" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="bg-background border-border">
+              <DropdownMenuItem onClick={() => navigate("/practice-areas/commercial-disputes")}>
+                Commercial Disputes
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => navigate("/practice-areas/debt-resolution")}>
+                Debt Resolution & Recovery
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => navigate("/practice-areas/cheque-bounce")}>
+                Cheque Bounce Cases
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => navigate("/practice-areas/consumer-disputes")}>
+                Consumer Disputes
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => navigate("/practice-areas/dispute-resolution")}>
+                Dispute Resolution
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
           <Button
             onClick={() => scrollToSection("contact")}
             className="bg-accent text-accent-foreground hover:bg-accent/90"
